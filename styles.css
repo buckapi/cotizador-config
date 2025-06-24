@@ -1,0 +1,287 @@
+/* Tooltip personalizado */
+.tooltip-inner {
+  max-width: 350px;
+  padding: 12px 18px;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-line;
+  font-weight: 500;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+}
+header {
+  background-color: #4d4d4d;
+  padding: 1rem;
+  color: white;
+}
+h1 {
+  font-weight: 700;
+}
+.highlight {
+  background: linear-gradient(to top, #fdcd28 0 40%, transparent 40% 100%);
+  display: inline;
+}
+.card-tramo {
+  border-radius: 20px;
+  background-color: white;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  height: 100%;
+}
+.card-tramo:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.btn-yellow {
+  background-color: #fdcd28;
+  color: black;
+  font-weight: 600;
+}
+.btn-yellow:hover {
+  background-color: #e6b800;
+}
+
+/* Estilos para el botón de cierre de sesión */
+#btnCerrarSesion {
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+}
+
+#btnCerrarSesion:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  #btnCerrarSesion {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    margin: 1rem 0 0 0 !important;
+    display: inline-block !important;
+  }
+}
+
+/* Estilos para el modal de inicio de sesión */
+#loginModal .modal-content {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#loginModal .modal-header {
+  background-color: #1a1a1a;
+  color: white;
+  border-bottom: 1px solid #333;
+}
+
+#loginModal .modal-body {
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+#loginModal .form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+#loginModal .btn-yellow {
+  background-color: #ffc107;
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+#loginModal .btn-yellow:hover {
+  background-color: #e0a800;
+  transform: translateY(-1px);
+}
+
+#togglePassword {
+  border-color: #ced4da;
+  transition: all 0.3s ease;
+}
+
+#togglePassword:hover {
+  background-color: #e9ecef;
+}
+
+/* Estilos para la carga inicial */
+body.auth-pending .container,
+body.auth-pending header,
+body.auth-pending footer {
+  display: none !important;
+}
+
+/* Estilos para el modal de tarifas */
+#modalTarifas .modal-content {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+}
+
+#modalTarifas .modal-header {
+  border-bottom: 1px solid #333;
+  padding: 1.25rem 1.5rem;
+}
+
+#modalTarifas .modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+#modalTarifas .modal-body {
+  padding: 1.5rem;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+#modalTarifas .tarifas-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+#modalTarifas .border-secondary {
+  border-color: #333 !important;
+}
+
+#modalTarifas .btn-close-white {
+  filter: invert(1) grayscale(100%) brightness(200%);
+  opacity: 0.8;
+}
+
+#modalTarifas .btn-close-white:hover {
+  opacity: 1;
+}
+
+/* Animación de entrada del modal */
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal.fade .modal-dialog {
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Estilos para el tooltip de tarifas */
+#tramoDetalle {
+  position: absolute;
+  display: none;
+  z-index: 1080;
+  max-width: 380px;
+  width: 100%;
+  animation: fadeIn 0.2s ease-in-out;
+  font-size: 1.05rem;
+}
+
+.tooltip-tarifas {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  padding: 1.25rem;
+}
+
+.tooltip-tarifas h6 {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.tooltip-tarifas .text-muted {
+  color: #b3b3b3 !important;
+}
+
+.tooltip-tarifas .badge {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+}
+
+.tooltip-tarifas .badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+}
+
+.tooltip-tarifas ul li {
+  transition: background-color 0.2s;
+}
+
+.tooltip-tarifas ul li:hover {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para el botón de eliminar */
+.btn-outline-danger {
+  border-width: 1px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+.timeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  padding: 2rem 0;
+  position: relative;
+  width: 100%;
+}
+.timeline-line {
+  height: 4px;
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+.timeline-item {
+  position: relative;
+  z-index: 1;
+  margin: 0 4px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.timeline-segment {
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  position: relative;
+}
+.timeline-item span {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  line-height: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+#tramoDetalle {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
