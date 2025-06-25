@@ -550,14 +550,13 @@ async function cargarTramos() {
     col.innerHTML = `<div class="card-tramo position-relative">
       ${isGridView ? buttons : ''}
       <h5 class="fw-bold">De ${tramo.kmDesde} Km A ${tramo.kmHasta} Km</h5>
- 
-      <p class="mb-2"><strong>Se aplica cada:</strong> ${tramo.unidadCadaKm || '1'} Km</p>
+      ${tramo.tipo !== 'fijo' ? `<p class="mb-2"><strong>Se aplica cada:</strong> ${tramo.unidadCadaKm || '1'} Km</p>` : ''}
       <div class="d-flex flex-column gap-1">
         ${tramo.tipo === 'fijo' ? `
           <span class="text-primary text-decoration-underline small" 
                 style="cursor: pointer;" 
                 onclick="event.stopPropagation(); mostrarTarifasEspecificas('${tramo._id}', 'aeropuerto_hotel', event)">
-            Ver tarifas Aeropuerto
+            Ver tarifas Aeropuerto - Hotel
           </span>
           <span class="text-primary text-decoration-underline small" 
                 style="cursor: pointer;" 
@@ -724,7 +723,7 @@ function mostrarDetalle(tramo, anchorElement) {
     // Para tramos por intervalo
     contenido += `
       <div class="mb-3">
-        <h6 class="fw-bold text-warning mb-3">Tarifas por km</h6>
+        <h6 class="fw-bold text-warning mb-3">Tarifas por cada ${tramo.unidadCadaKm}  km</h6>
         ${generarHTMLTarifas(tramo.tarifas)}
       </div>
     `;

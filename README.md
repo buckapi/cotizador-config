@@ -48,7 +48,7 @@ Aplicación web para la gestión y administración de esquemas de tarifas basado
 2. **Vistas Disponibles**
    - **Cuadrícula**: Muestra los tramos en formato de tarjetas
    - **Lista**: Muestra los tramos en formato de lista
-   - **Línea de tiempo**: Muestra los tramos en orden secuencial
+   - **Líneaal**: Muestra los tramos en orden secuencial
 
 3. **Gestión de Tramos**
    - **Nuevo Esquema**: Crea un nuevo tramo de tarifas
